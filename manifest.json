@@ -1,0 +1,27 @@
+{
+  "name": "Anno",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Music adnotation",
+  "icons": {
+    "16": "imgs/anno_icon.png",
+    "48": "imgs/anno_icon.png",
+    "128": "imgs/anno_icon.png"
+  },
+  "background": {
+    "scripts": [
+    ]
+  },
+  "browser_action": {
+    "default_title": "Anno",
+    "default_icon": "imgs/anno_icon.png",
+    "default_popup": "popup/popup.html"
+  },
+  "option_page": "option_page.html",
+  "permissions": [
+    "background",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
