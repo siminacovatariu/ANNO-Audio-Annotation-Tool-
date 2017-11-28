@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es7"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "build/dist",
+    "rootDir": "src",
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "acceptance-tests",
+    "build",
+    "jest",
+    "node_modules",
+    "scripts",
+    "src/setupTests.ts",
+    "webpack",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ]
+}
