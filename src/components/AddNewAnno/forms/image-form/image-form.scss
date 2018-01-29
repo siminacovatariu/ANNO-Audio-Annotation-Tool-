@@ -1,0 +1,16 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  .input-group {
+    display: flex;
+  }
+}
+
+.second {
+  padding-right: 1% !important;
+}
+
+.icon {
+  padding-right: 3% !important;
+}
