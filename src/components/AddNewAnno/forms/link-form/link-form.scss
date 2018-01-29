@@ -1,9 +1,23 @@
-.form-container{
+.form-container {
   display: flex;
+  margin: 15px;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  width: 75%;
   .input-group {
     display: flex;
+  }
+  .inputs {
+    margin-bottom: 15px;
+    &:nth-child(1) {
+      margin-top: 25px;
+    }
+  }
+
+  .second {
+    margin-bottom: 15px;
+  }
+  .button {
+    margin-bottom: 25px;
   }
 }

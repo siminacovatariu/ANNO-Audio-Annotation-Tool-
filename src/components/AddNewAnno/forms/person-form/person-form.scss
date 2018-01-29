@@ -1,0 +1,21 @@
+.form-container {
+  display: flex;
+  margin: 15px;
+  flex-direction: column;
+  align-items: center;
+  .pt-input-group {
+    width: 75%;
+  }
+  .inputs {
+    margin-bottom: 15px;
+  }
+  .second {
+    margin-bottom: 15px;
+  }
+  .types{
+    margin-bottom: 15px;
+  }
+  .button {
+    margin-bottom: 25px;
+  }
+}
