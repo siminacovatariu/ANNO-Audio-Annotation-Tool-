@@ -14,7 +14,9 @@ export class TextFrom extends React.Component {
               <span className='pt-icon pt-icon-label'/>
               <textarea className='pt-input' placeholder='Annotation text'/>
             </div>
-          <Button className='pt-intent-primary button'>Add Anno Text</Button>
+          <div>
+            <Button className='pt-intent-primary button'>Add Anno Text</Button>
+          </div>
       </form>
   );
   }
