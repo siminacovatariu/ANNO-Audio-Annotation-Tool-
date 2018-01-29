@@ -13,12 +13,11 @@
 // }
 
 function viewIfTabIsSong() {
-  console.log('function called');
   window.chrome.tabs.onUpdated.addListener((tabId, changedInfo, tab) => {
-    console.log(changedInfo, tab);
-
-    console.log(document.querySelector('#anno-song-title'));
+    if (changedInfo.audible === true) {
+      localStorage.setItem('song_title', tab.title);
+    }
   });
 }
 
-setTimeout(viewIfTabIsSong, 1000);
+viewIfTabIsSong();
