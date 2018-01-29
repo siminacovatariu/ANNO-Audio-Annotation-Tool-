@@ -7,6 +7,9 @@ export class TextFrom extends React.Component {
     return (
       <form className='pt-elevation-4 form-container'>
         <div>
+          <div className={'pt-input-group'}>
+            <input type='number' placeholder='second for text' className={'pt-input pt-icon-time'}/>
+          </div>
           <div className='pt-input-group input-group'>
             <span className='pt-icon pt-icon-swap-vertical'/>
             <input className='pt-input' type='number' placeholder='width'/>

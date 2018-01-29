@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './person-form.css';
 
 export class PersonFrom extends React.Component {
   render() {

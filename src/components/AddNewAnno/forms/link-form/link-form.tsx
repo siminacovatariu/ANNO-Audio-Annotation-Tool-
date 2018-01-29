@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './link-form.css';
 
 export class LinkForm  extends React.Component {
   render() {

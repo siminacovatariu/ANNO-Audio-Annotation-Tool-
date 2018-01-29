@@ -3,12 +3,14 @@ import * as React from 'react';
 import { TextFrom } from './forms/text-form/TextFrom';
 import { LinkForm } from './forms/link-form/link-form';
 import './AddNewAnno.css';
+import { ImageForm } from './forms/image-form/image-form';
+import { PersonFrom } from './forms/person-form/person-from';
 
 export class AddNewAnno extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
-      view: <TextFrom/>,
+      view: <ImageForm/>,
       title: null
     };
     this.setSongTitle = this.setSongTitle.bind(this);
@@ -48,10 +50,16 @@ export class AddNewAnno extends React.Component<any, any> {
   private handleClick(optionId) {
     switch (optionId) {
       case 1:
-        this.setState({view: <TextFrom/>});
+        this.setState({view: <ImageForm/>});
         break;
       case 2:
         this.setState({view: <LinkForm/>});
+        break;
+      case 3:
+        this.setState({view: <TextFrom/>});
+        break;
+      case 4:
+        this.setState({view: <PersonFrom/>});
         break;
       default:
         this.setState({view: <TextFrom/>});
