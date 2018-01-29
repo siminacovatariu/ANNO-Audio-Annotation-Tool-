@@ -3,10 +3,9 @@
   height: 50px;
   display: flex;
   button {
-    width: 45%;
-    margin: 5px 5px;
+    width: 50%;
     border: none;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 5px 5px 5px #aaaaaa;
     background-color: #0E5A8A;
     color: #ffffff;
     text-transform: uppercase;
@@ -16,5 +15,8 @@
       font-size: 24px;
       background-color: #48AFF0;
     }
+  }
+  button:hover {
+    box-shadow: 7px 7px 3px #515151;
   }
 }

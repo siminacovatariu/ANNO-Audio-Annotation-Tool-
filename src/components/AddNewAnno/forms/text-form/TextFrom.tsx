@@ -6,7 +6,6 @@ export class TextFrom extends React.Component {
   render() {
     return (
       <form className='pt-elevation-4 form-container'>
-        <h1> Text Annotation </h1>
         <div>
           <div className='pt-input-group input-group'>
             <span className='pt-icon pt-icon-swap-vertical'/>

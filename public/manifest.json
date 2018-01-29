@@ -1,15 +1,26 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "name": "Anno",
+  "description": "This is an chrome extension which allow you to add audio anotation",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "48": "anno_icon.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_tile": "Anno"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "notifications",
+    "background",
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
 }

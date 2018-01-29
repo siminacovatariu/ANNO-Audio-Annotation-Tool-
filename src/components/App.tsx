@@ -7,15 +7,6 @@ export class App extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
-      menuItems: [
-        {
-          id: 1,
-          text: 'Add new Anoo'
-        },
-        {
-          id: 2,
-          text: 'My Anno'
-        }],
       view: <AddNewAnno/>
     };
   }
@@ -35,7 +26,6 @@ export class App extends React.Component<any, any> {
   }
 
   private handleClick(elementID) {
-
     if (elementID === 1) {
       this.setState({view: <AddNewAnno/>});
     } else if (elementID === 2) {
