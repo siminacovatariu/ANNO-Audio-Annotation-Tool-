@@ -1,7 +1,7 @@
 import { Button, Menu, MenuItem, Popover } from '@blueprintjs/core';
 import * as React from 'react';
-import './AddNewAnno.css';
 import { TextFrom } from './forms/text-form/TextFrom';
+import { LinkForm } from './forms/link-form/link-form';
 
 export class AddNewAnno extends React.Component<any, any> {
   constructor(props) {
@@ -40,7 +40,7 @@ export class AddNewAnno extends React.Component<any, any> {
         this.setState({view: <TextFrom/>});
         break;
       case 2:
-        this.setState({view: null});
+        this.setState({view: <LinkForm/>});
         break;
       default:
         this.setState({view: <TextFrom/>});

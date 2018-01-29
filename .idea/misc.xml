@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="IdProvider" IDEtalkID="EB68BB6D7CED43DD43D3F488EA3AAB15" />
-  <component name="JavaScriptSettings">
-    <option name="languageLevel" value="JSX" />
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="false" />
 </project>

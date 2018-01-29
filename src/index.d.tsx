@@ -3,6 +3,7 @@ export interface IIanno {
   type: string;
   time: number;
   title: string;
+  url: string;
   annotation: IImage | ILink | IText | IPerson;
 }
 
