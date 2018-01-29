@@ -5,6 +5,8 @@ import './image-form.css';
 const uniqid = require('uniqid');
 
 export class ImageForm extends React.Component<any, any> {
+  private window: any = window;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -60,6 +62,12 @@ export class ImageForm extends React.Component<any, any> {
     const objectToAdd = {id: uniqid(), title: title, url: url, ...this.state};
     actualLocalStorage.unshift(objectToAdd);
     localStorage.setItem('anno', JSON.stringify(actualLocalStorage));
-    localStorage.setItem('notification', 'true');
+    const option = {
+      type: 'basic',
+      title: 'Anno Notification',
+      message: 'Annotation created',
+      iconUrl: 'anno_icon.png'
+    };
+    this.window.chrome.notifications.create(option, () => console.log('annotation created'));
   }
 }

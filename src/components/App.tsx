@@ -14,7 +14,7 @@ export class App extends React.Component<any, any> {
   render() {
     const header = (
       <div className='anno-header'>
-        <button className='active' onClick={() => this.handleClick(1)}> Add New Anoo</button>
+        <button className='active' onClick={() => this.handleClick(1)}> Add New Anno</button>
         <button onClick={() => this.handleClick(2)}> My Anno</button>
       </div>);
     return (

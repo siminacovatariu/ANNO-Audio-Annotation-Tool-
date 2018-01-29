@@ -1,4 +1,4 @@
-export interface IIanno {
+export interface IAnno {
   id: string;
   type: string;
   time: number;

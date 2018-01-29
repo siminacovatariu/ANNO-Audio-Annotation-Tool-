@@ -1,23 +1,27 @@
-// function nontify() {
-//   const option = {
-//     type: 'list',
-//     title: 'Ano Notification Running',
-//     message: 'NIII ma',
-//     iconUrl: '../imgs/anno_icon.png',
-//     items: [{title: 'Pop1', message: 'first song'},
-//       {title: 'Pop2', message: 'second song'},
-//       {title: 'Pop3', message: 'third song'}]
-//   };
-//
-//   chrome.notifications.create(option, () => console.log('pop Done!'));
-// }
+function notify() {
+  if (localStorage.getItem('notification') !== null) {
+    const option = {
+      type: 'basic',
+      title: 'Anno Notification',
+      message: 'Annotation created',
+      iconUrl: 'anno_icon.png',
+    };
+    chrome.notifications.create(option, () => localStorage.removeItem('notification'));
+  }
+}
 
 function viewIfTabIsSong() {
+  if (localStorage.getItem('song_title') === null) {
+    localStorage.setItem('song_title', ' Song name');
+  }
   window.chrome.tabs.onUpdated.addListener((tabId, changedInfo, tab) => {
     if (changedInfo.audible === true) {
       localStorage.setItem('song_title', tab.title);
+      localStorage.setItem('song_url', tab.url);
     }
   });
 }
 
 viewIfTabIsSong();
+
+setTimeout(notify, 1000);

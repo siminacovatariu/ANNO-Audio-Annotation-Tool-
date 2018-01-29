@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ANNO-Audio-Annotation-Tool-.iml" filepath="$PROJECT_DIR$/.idea/ANNO-Audio-Annotation-Tool-.iml" />
       <module fileurl="file://$PROJECT_DIR$/ANNO-Audio-Annotation-Tool-.iml" filepath="$PROJECT_DIR$/ANNO-Audio-Annotation-Tool-.iml" />
     </modules>
   </component>
