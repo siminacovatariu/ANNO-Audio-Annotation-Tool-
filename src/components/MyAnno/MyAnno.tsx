@@ -1,4 +1,4 @@
-import { Icon } from '@blueprintjs/core';
+import { Button, Icon } from '@blueprintjs/core';
 import * as React from 'react';
 import './MyAnno.css';
 
@@ -74,8 +74,40 @@ export class MyAnno extends React.Component {
 
     return (
       <div className='myAnno--container'>
+        <div className='myAnno--export'>
+          <Button className='pt-intent-primary' onClick={this.exportCSV}>Export CSV</Button>
+          <Button className='pt-intent-success' onClick={this.exportJSON}>Export JSON</Button>
+          <Button className='pt-intent-warning pt-disabled' onClick={this.exportXML}>Export XML</Button>
+        </div>
         {annoCard}
       </div>
     );
+  }
+
+  private exportJSON() {
+    const FileContent = localStorage.getItem('anno');
+    const FileSaver = require('file-saver');
+    const blob = new Blob([FileContent], {type: 'text/plain;charset=utf-8'});
+    return FileSaver.saveAs(blob, 'file.json');
+  }
+
+  private exportCSV() {
+    let textToConvert = localStorage.getItem('anno');
+    textToConvert = textToConvert.replace(/\[/g, '');
+    textToConvert = textToConvert.replace(/\]/g, '');
+    textToConvert = textToConvert.replace(/\"/g, '');
+    textToConvert = textToConvert.replace(/\{/g, '');
+    textToConvert = textToConvert.replace(/\}},/g, '\r\n');
+    textToConvert = textToConvert.replace(/\}/g, '');
+    textToConvert = textToConvert.replace(/\"annotation"/g, '');
+
+    const FileSaver = require('file-saver');
+    const blob = new Blob([textToConvert], {type: 'text/plain;charset=utf-8'});
+    return FileSaver.saveAs(blob, 'file.csv');
+
+  }
+
+  private exportXML() {
+    const JSON = localStorage.getItem('anno');
   }
 }
